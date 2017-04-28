@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Сайт</title>
+</head>
+<style type="text/css">
+	.wrapper {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: url(http://lezgi-yar.ru/_nw/29/31126179.jpg) top no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	.item {
+		position: absolute;
+		left: calc(50% - 179px);
+		top: -100%;
+		transform: translate(0, -50%);
+	}
+	.face {
+		position: absolute;
+		top: 50%;
+		margin-top: -90px;
+		transform: scale(0,0);
+		left: calc(50% - 90px);
+		width: 50%;
+		transition: all 1.2s;
+	}
+</style>
+<body>
+	<div class="wrapper">
+		<div class="item">
+			<img src="http://www.vokrugsveta.ru/img/cmn/2014/11/25/004.jpg">
+			<img src="naida.png" class="face">
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.item').animate({top: '50%'}, 1500);
+		setTimeout(function(){
+			$('.face').css('transform', 'scale(1,1)');
+		},1800);
+		
+	});
+</script>
+</html>
